@@ -1,8 +1,5 @@
 # Stage 1: Build stage
-FROM ubuntu:latest AS build
-
-# Cập nhật danh sách gói và cài đặt OpenJDK 21 và Maven
-RUN apt-get update && apt-get install -y openjdk-21-jdk maven
+FROM maven:3.9.8-amazoncorretto-21 AS build
 
 # Thiết lập thư mục làm việc
 WORKDIR /app
